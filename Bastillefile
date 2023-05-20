@@ -1,0 +1,12 @@
+ARG CONF_DIR = /tank2/nextcloud_conf/
+
+CMD mkdir -p /usr/local/etc/nginx
+MOUNT ${CONF_DIR} /usr/local/etc/nginx nullfs rw 0 0
+
+CMD chown www:www /usr/local/etc/nginx
+
+PKG nginx-lite 
+
+SYSRC nginx_enable=YES
+SERVICE nginx start
+
