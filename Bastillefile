@@ -1,3 +1,6 @@
+CONFIG set sysvshm=new
+RESTART
+
 ARG CONF_DIR=/tank2/nextcloud_conf
 
 CMD mkdir -p /usr/local/etc/nginx
