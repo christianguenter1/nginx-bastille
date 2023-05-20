@@ -1,4 +1,4 @@
-ARG CONF_DIR = /tank2/nextcloud_conf
+ARG CONF_DIR=/tank2/nextcloud_conf
 
 CMD mkdir -p /usr/local/etc/nginx
 MOUNT ${CONF_DIR} /usr/local/etc/nginx nullfs rw 0 0
